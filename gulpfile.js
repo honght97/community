@@ -15,7 +15,7 @@ function copyAsset() {
 }
 
 function cleanSource() {
-  return del(["dist/**", "!dist"]);
+  return del(["template/**", "!dist"]);
 }
 
 //compile scss into css
@@ -50,7 +50,7 @@ function optimizeImages() {
         })
       )
     )
-    .pipe(gulp.dest("dist/assets/images"));
+    .pipe(gulp.dest("template/assets/images"));
 }
 
 //compile jade into html
@@ -90,7 +90,7 @@ const build = gulp.series(
   style,
   html,
   copyAsset,
-  optimizeImages,
+  // optimizeImages,
   watch
 );
 
@@ -99,6 +99,6 @@ exports.cleanSource = cleanSource;
 exports.style = style;
 exports.html = html;
 exports.build = build;
-exports.optimage = optimizeImages;
+// exports.optimage = optimizeImages;
 exports.watch = watch;
 exports.default = build;
