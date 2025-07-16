@@ -1,0 +1,60 @@
+extends _layout/default
+
+block vars
+  -title        = 'Homepage'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'homepage'
+  -path         = '.'
+
+block scripts
+
+block container
+
+  section.program.bg1
+    .container(data-aos="fade-up")
+      .program-wrap
+        .tt-wrap.t-ct
+          p.tt-sub.fw-700.cl-pri CHƯƠNG TRÌNH
+          h2.tt-50.cl-pri.fw-700 DIỄN ĐÀN CHUYỂN ĐỔI XANH
+            br
+            | VÌ PHÁT TRIỂN BỀN VỮNG
+        .program-info
+          .program-box
+            ul
+              li
+                span Thời gian:
+                | Từ 08:00 – 17:00, ngày 31 tháng 7 năm 2025
+              li
+                span Địa điểm:
+                | Hội trường Thống Nhất - Dinh Độc Lập, 135 Nam Kỳ Khởi nghĩa, P. Bến Thành, TPHCM
+              li
+                span Quy mô:
+                | 300 đại biểu
+        .step-box
+          h3.tt-30.fw-900.cl-pri NHỮNG NỘI DUNG NỔI BẬT
+          .step-inner
+            .program-box
+              .mona-content
+                h4 Hội thảo CHUYỂN ĐỔI XANH TRONG BỐI CẢNH MỚI
+                p Từ 08:00 - 12:30
+                ul
+                  li Bài trình bày: “Lộ trình xanh hóa của TP.HCM đến năm 2030 và vai trò của doanh nghiệp tư nhân trong lộ trình này”
+                  li Bài trình bày: “Phát triển xanh và sứ mệnh của Liên minh tái chế bao bì ProVietnam”
+                  li Bài trình bày: “Những thách thức của Chuyển đổi xanh trong thế giới VUCA”
+                  li Bài trình bày “Sáng kiến thúc đẩy tái chế từ doanh nghiệp trên nền gắn bó với người tiêu dùng”
+                  li Công bố Gói tài trợ cho 12 công ty nhỏ và doanh nghiệp Khởi Nghiệp XANH với mục đích “Kích hoạt chuyển đổi XANH, nâng cao tiêu chuẩn để xuất khẩu” do Hội DN HVNCLC tổ chức
+                  li Ký kết Thỏa thuận hợp tác về các hoạt động hỗ trợ doanh nghiệp chuyển đổi xanh
+                  li Tọa đàm “Hành trình xanh hóa của doanh nghiệp Việt Nam hướng tới mục tiêu Net Zero”
+            .program-box
+              .mona-content
+                h4 HÀNH TRÌNH CHUYỂN ĐỔI XANH CỦA THANH NIÊN - SINH VIÊN VIỆT NAM
+                p Từ 14:00 - 17:00
+                ul
+                  li Giao lưu: 5 PHÚT SỐNG XANH - Hành động nhỏ, ý nghĩa lớn
+                  li Talk show: KHI CUỘC ĐỜI CHO TA QUẢ DỨA
+                  li Chung kết cuộc thi: Ý TƯỞNG SÁNG TẠO TRONG SINH VIÊN
+          .intro-img
+            +img("home/intro.svg")

@@ -1,0 +1,141 @@
+.form-group {
+  margin-bottom: 1.6rem;
+}
+.form-label {
+  color: $color-pri;
+  @include fz-15;
+  font-weight: 500;
+  font-family: var(--font-pri);
+  display: block;
+  margin-bottom: 1.6rem;
+}
+.form-input {
+  font-family: var(--font-pri);
+  border-radius: 1rem;
+  border: 1px solid #8fab2a36;
+  background: #fff;
+  width: 100%;
+  padding: 1.6rem;
+  @include fz-15;
+  color: $color-pri;
+  @include transition;
+  &:focus {
+    outline: none;
+    border-color: #90ab2a;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  &::placeholder {
+    color: #ccc;
+  }
+}
+.form-text {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+.form-password {
+  position: relative;
+}
+.password-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 1.6rem;
+  width: fit-content;
+  top: 50%;
+  transform: translateY(-50%);
+  .icon-show,
+  .icon-hide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include box(1.8rem);
+  }
+  img {
+    @include box(1.8rem);
+  }
+  .icon-hide {
+    display: none;
+  }
+  &.is-active {
+    .icon-show {
+      display: none;
+    }
+    .icon-hide {
+      display: block;
+    }
+  }
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 1.6rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-height: 2rem;
+  &.radio {
+    .checkmark {
+      @include box(1.8rem);
+      border-radius: 50%;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      &::after {
+        @include box(1rem);
+        border: 0;
+        background: #90ab2a;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+.checkbox-text {
+  color: $color-pri;
+  font-size: 1.3rem;
+  line-height: 100%;
+}
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  &:checked {
+    & ~ .checkmark {
+      &::after {
+        display: block;
+      }
+    }
+  }
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border: 1px solid #90ab2a;
+  width: 2rem;
+  background-color: transparent;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 0.6rem;
+    top: 0.1rem;
+    width: 0.5rem;
+    height: 1rem;
+    border: solid #90ab2a;
+    border-width: 0 0.3rem 0.3rem 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}

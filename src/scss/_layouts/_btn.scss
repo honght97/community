@@ -1,0 +1,56 @@
+.btn {
+  @include fz-25;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.4rem 2rem;
+  position: relative;
+  transition: 0.3s ease all;
+  z-index: 1;
+  overflow: hidden;
+  font-family: var(--font-pri);
+  background: $color-pri;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: #fff;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  line-height: 1.4;
+  &::before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: $color-pri;
+    z-index: -1;
+  }
+
+  &:hover,
+  &:focus {
+    color: white;
+  }
+
+  &:hover:before,
+  &:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  @include max(575.98px) {
+    border-radius: 5px;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    text-align: justify;
+    padding: 0.1rem 0.95rem;
+  }
+}
+
+.btn--border {
+  border-color: #196e2c;
+}

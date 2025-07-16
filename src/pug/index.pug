@@ -1,0 +1,59 @@
+extends _layout/default
+
+block vars
+  -title        = 'Homepage'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'homepage'
+  -path         = '.'
+
+block scripts
+
+block container
+
+  section.intro.bg1
+    .container
+      .intro-wrap
+        .intro-l(data-aos="fade-right")
+          h2.tt-50.cl-pri.fw-700 DIỄN ĐÀN
+            br
+            | CHUYỂN ĐỔI XANH
+          .intro-txt
+            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.
+          a.btn.btn--border(href="#")
+            span Xem chi tiết
+        .intro-r(data-aos="fade-left")
+          .intro-img
+            +img("home/intro.svg")
+  section.intro.bg2
+    .container
+      .intro-wrap
+        .intro-l(data-aos="fade-right")
+          h2.tt-50.cl-pri.fw-700 NGÀY HỘI TÁI CHẾ
+          .intro-txt
+            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.
+          a.btn.btn--border(href="#")
+            span Xem chi tiết
+        .intro-r(data-aos="fade-left")
+          .intro-img
+            +img("home/intro1.svg")
+  section.solution
+    .container(data-aos="fade-up")
+      .solution-wrap
+        h2.tt-50.fw-700.cl-pri.t-ct CUỘC THI DỰ ÁN XANH -
+          br
+          | &nbsp;SÁNG KIẾN TÁI CHẾ -
+          br
+          | &nbsp;GIẢI PHÁP TUẦN HOÀN
+        .intro-txt
+          p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.
+        a.btn.btn--border(href="#")
+          span Xem chi tiết
+        .top-group.img-list
+          each item, id in Array(7)
+            .top-img
+              +img(`home/solution${id + 1}.svg`)
+
+

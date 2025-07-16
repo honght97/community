@@ -1,0 +1,57 @@
+.tt-50 {
+  @include fz-50;
+  @include max(575.98px) {
+    font-size: 2rem;
+  }
+}
+.tt-sub {
+  letter-spacing: 15px;
+  @include fz-30;
+  @include max(575.98px) {
+    font-size: 1.5rem;
+    letter-spacing: 4.5px;
+  }
+}
+.fw-700 {
+  font-weight: 700;
+}
+.cl-pri {
+  color: $color-pri;
+}
+.bg1 {
+  background: $color-second;
+}
+.bg2 {
+  background: #377e53;
+}
+.t-ct {
+  text-align: center;
+}
+.tt-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4.5rem;
+  @include max(575.98px) {
+    row-gap: 1.5rem;
+  }
+  .tt-50 {
+    br {
+      display: none;
+      @include max(575.98px) {
+        display: block;
+      }
+    }
+  }
+}
+.fw-900 {
+  font-weight: 900;
+  @include max(575.98px) {
+    font-weight: 700;
+  }
+}
+.tt-30 {
+  @include fz-30;
+  @include max(575.98px) {
+    font-size: 1.5rem;
+  }
+}

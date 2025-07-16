@@ -1,0 +1,15 @@
+:root {
+  --font-pri: "Barlow", sans-serif;
+  --font-sec: "Inter", sans-serif;
+  --size-hd: 10rem;
+}
+
+$color-pri: #196e2c;
+$color-second: #faffec;
+$color-btn: #e2ead3;
+$header: 9.4rem;
+@mixin max($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}

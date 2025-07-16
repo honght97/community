@@ -1,0 +1,68 @@
+.overlay
+.header-mobile.js-header-mobile
+  .header-close.js-header-close
+    +img("common/ico_close.svg")
+  .header-wrap
+    .header-main
+      if pageID !== "accountpage" && pageID !== "accountSetting"
+        .header-sign
+          a.btn.btn--second(href="#" target="_self") Đăng nhập
+          a.btn.btn--three(href="#" target="_self") Đăng ký
+      if pageID === "accountpage"
+        .header-account.dropdown
+          +avatar
+          ul.child
+            li.menu-item
+              +self("Tài khoản")
+            li.menu-item.current-menu-item
+              +self("Khóa học của tôi")
+            li.menu-item
+              +self("Cài đặt")
+            li.menu-item
+              +self("Đăng xuất")
+      if pageID === "accountSetting"
+        .header-account.dropdown
+          +avatar
+          ul.child
+            li.menu-item
+              +self("Tài khoản")
+            li.menu-item
+              +self("Khóa học của tôi")
+            li.menu-item.current-menu-item
+              +self("Cài đặt")
+            li.menu-item
+              +self("Đăng xuất")
+      nav.header-nav
+        ul.menu-list
+          if pageID !== "accountpage" && pageID !== "accountSetting"
+            li.menu-item.current-menu-item.dropdown
+              a(href="#") Khóa học
+              ul.child
+                li.menu-item
+                  +self("Canva Design School: Graphic Design Basics")
+                li.menu-item
+                  +self("CalArts Graphic Design Specialization")
+                li.menu-item
+                  +self("Adobe Illustrator for Beginners")
+            each menuData, index in [{title: "FAQs"}, {title: "Blog"}]
+              li.menu-item
+                a(href="#")= menuData.title
+          if pageID === "accountpage" || pageID === "accountSetting"
+            li.menu-item.dropdown
+              a(href="#") Khóa học
+              ul.child
+                li.menu-item
+                  +self("Canva Design School: Graphic Design Basics")
+                li.menu-item
+                  +self("CalArts Graphic Design Specialization")
+                li.menu-item
+                  +self("Adobe Illustrator for Beginners")
+            each menuData, index in [{title: "FAQs"}, {title: "Blog"}]
+              li.menu-item
+                a(href="#")= menuData.title
+    .header-info
+      .header-logo
+        a(href="#" target="_self")
+          +img("common/logo_white.svg")
+      p.header-desc Khóa học online về Thiết kế & Sáng tạo
+      a.header-desc(href="mail:support@ctrls.vn" target="_blank")  Email: support@ctrls.vn

@@ -1,0 +1,145 @@
+mixin img(name)
+  img(src=path+"/assets/images/" + name, alt="" title="" loading="lazy")
+
+mixin self(text="" ,className="", hrefatt="#")
+  if className
+    a(href=hrefatt target="_self" class=className)=text
+      block
+  else
+    a(href=hrefatt target="_self")= text
+      block
+mixin blank(text="" ,className="", attr="#")
+  if className
+    a(href=attr target="_blank" class=className)= text
+      block
+  else
+    a(href=attr target="_blank" class=className)= text
+      block
+
+mixin breadcrumb(items)
+  .breadcrumb
+    .container
+      ul.breadcrumb-list
+        - var length = items.length
+        each item, index in items
+          if index !== length - 1
+            li.breadcrumb-item
+              a(href="" target="_self")= item
+          else
+            li.breadcrumb-item.is-current
+              a(href="" target="_self")= item
+mixin bannerSub(title="Câu chuyện khách hàng", breadcrumb=["Trang chủ", "Về chúng tôi", "Câu chuyện khách hàng"], img="post/banner.jpg")
+  section.banner-sub
+    .banner-sub_bg
+      +img(img)
+    .container
+      .banner-sub_content(data-aos="fade-up")
+        h1.banner-tt!= title
+        +breadcrumb(breadcrumb)
+mixin pagination
+  .pagination(data-aos="fade-up")
+    ul.page-numbers
+      li
+        a.page-numbers.prev(href="#!")
+          +img("icon/icon_pagi_left.svg")
+          span Trước
+      li
+        span.page-numbers.current
+          span.page-numbers-ajax 1
+      li
+        a.page-numbers(href="#!")
+          span.page-numbers-ajax 2
+      li
+        a.page-numbers(href="#!")
+          span.page-numbers-ajax 3
+      li
+        span.page-numbers.dots ...
+      li
+        a.page-numbers(href="#!")
+          span.page-numbers-ajax 8
+      li
+        a.page-numbers(href="#!")
+          span.page-numbers-ajax 9
+      li
+        a.page-numbers(href="#!")
+          span.page-numbers-ajax 10
+      li
+        a.page-numbers.next(href="#!")
+          +img("icon/icon_pagi_left.svg")
+          span Tiếp
+
+
+mixin avatar(img="common/img_2.jpg", link=false)
+  if link
+    +self("", 'avatar-wrap')
+      .avatar
+        +img(img)
+      span.name monamedia
+  else
+    .avatar-wrap
+      .avatar
+        +img(img)
+      span.name monamedia
+
+mixin radio(text='', text1="", id="", name="" , checked=false)
+  label.checkbox.radio(for=id)
+    span.checkbox-text=text
+      | &#160;
+    strong.checkbox-text=text1
+    if checked
+      input.checkbox-input(type="radio", id=id, name=name, checked)
+    else
+      input.checkbox-input(type="radio", id=id, name=name)
+    span.checkmark
+
+mixin checkbox(id="", text="")
+  label.checkbox(for=id)
+    span.checkbox-text=text
+    input.checkbox-input(type="checkbox", id=id)
+    span.checkmark
+
+mixin password(text="Mật khẩu", placeholder='Nhập mật khẩu của bạn', id='password')
+  label.form-label(for=id)
+    span.form-text=text
+    .form-password.js-password
+      input.form-input(type="password" , placeholder=placeholder, id=id)
+      .password-icon.js-password-icon
+        span.icon-show
+          +img("common/ico_show.svg")
+        span.icon-hide
+          +img("common/ico_hide.svg")
+
+mixin Input(text="", placeholder="", type='text', id="input1")
+  label.form-label(for=id)
+    span.form-text=text
+    input.form-input(type=type, placeholder=placeholder, id=id)
+
+
+mixin articleItem
+  .article-item
+    .article-card
+      +self("", "article-picture")
+        .article-img
+          +img("common/article.jpg")
+      .article-content
+        .article-info
+          span.article-date
+            +img("common/ico_date.svg")
+            | Th1 22, 2022
+          +avatar("common/img_2.jpg", true)
+        ul.tag
+          li.tag-item
+            +self("Tủ bếp")
+          li.tag-item
+            +self("Tủ quần áo")
+          li.tag-item
+            +self("Tủ Vantity")
+          li.tag-item
+            +self("Tủ gỗ Module")
+        h3.article-title
+          +self("Tủ bếp hiện đại màu xám và đỏ sẫm khu biệt thự BLCC23001")
+        p.article-desc
+          span Diện tích càng lớn thì đơn giá càng thấp. Vì cùng một chi phí quản lý, đi lại, cư trú với diện tích lớn, giá tổng thể sẽ tăng không nhiều, chỉ tăng giá nhân công.
+        .article-more
+          +self("Xem chi tiết")
+            +img("common/ico_more.svg")

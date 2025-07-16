@@ -1,0 +1,140 @@
+extends _layout/default
+
+block vars
+  -title        = 'Homepage'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'homepage'
+  -path         = '.'
+
+block scripts
+
+block container
+  .container
+    +breadcrumb(['Trang chủ', 'Giới thiệu', "Dịch vụ mua hàng Trung Quốc về Việt Nam giá tốt, uy tín"])
+    +radio('Thanh toán bằng', 'thẻ','payment1','payment',true)
+    +radio('Thanh toán bằng', 'momo','payment2', 'payment')
+    +checkbox("policyInput", 'Tôi đồng ý với Điều khoản sử dụng và Chính sách bảo mật')
+    +password
+    +Input("Họ tên", 'Nhập họ tên của bạn' )
+    +Input("Email", 'Nhập Email của bạn', 'email', 'input2')
+    +self("Button primary", 'btn')
+    br
+    +self("link self")
+    br
+    +blank("link blank")
+    br
+    +img("common/img_2.jpg")
+    +articleItem
+    .is-horizontal
+      .article-item
+        +self("", "article-card")
+          .article-picture
+            .article-img
+              +img("common/article.jpg")
+          .article-content
+            .article-info
+              span.article-date
+                +img("common/ico_date.svg")
+                | Th1 22, 2022
+            h3.article-title Tủ bếp hiện đại màu xám và đỏ sẫm khu biệt thự BLCC23001
+    .mona-content
+      h2 Vì sao nên lựa chọn nhập buôn hàng Quảng Châu?
+      p Không phải tự nhiên mà khi nhắc đến nguồn hàng giá rẻ, chất lượng người ta lại tìm đến thị trường hàng hóa Quảng Châu, Trung Quốc. Sở dĩ hàng Quảng Châu có chỗ đứng trên thị trường kinh doanh là nhờ các lý do sau đây:
+      ul
+        li
+          strong  Giá cả hợp lý:&#160;
+          | So với hàng hóa từ các quốc gia khác như Mỹ, Nhật Bản, Hàn Quốc, hàng Quảng Châu thường được bán sỉ với giá rẻ hơn rất nhiều. Điều này giúp tiết kiệm chi phí cho nhà kinh doanh và mang lại lợi nhuận cao hơn.
+        li
+          strong  Mẫu mã đa dạng:&#160;
+          | Quảng Châu được ví như “thủ phủ sản xuất” của Trung Quốc với hàng trăm nhà xưởng sản xuất và gia công. Do đó, nguồn hàng Quảng Châu vô cùng phong phú về mẫu mã, kiểu dáng, đáp ứng mọi nhu cầu và thị hiếu của người tiêu dùng. Các nhà kinh doanh có thể dễ dàng lựa chọn sản phẩm phù hợp với xu hướng.
+      +img("common/article.jpg")
+      ol
+        li
+          strong  Giá cả hợp lý:&#160;
+          | So với hàng hóa từ các quốc gia khác như Mỹ, Nhật Bản, Hàn Quốc, hàng Quảng Châu thường được bán sỉ với giá rẻ hơn rất nhiều. Điều này giúp tiết kiệm chi phí cho nhà kinh doanh và mang lại lợi nhuận cao hơn.
+        li
+          strong  Mẫu mã đa dạng:&#160;
+          | Quảng Châu được ví như “thủ phủ sản xuất” của Trung Quốc với hàng trăm nhà xưởng sản xuất và gia công. Do đó, nguồn hàng Quảng Châu vô cùng phong phú về mẫu mã, kiểu dáng, đáp ứng mọi nhu cầu và thị hiếu của người tiêu dùng. Các nhà kinh doanh có thể dễ dàng lựa chọn sản phẩm phù hợp với xu hướng.
+      h3 Những mặt hàng giá tận gốc nên nhập từ Quảng Châu
+      p Mặc dù các mặt hàng Quảng Châu đều thu hút phần lớn người tiêu dùng Việt Nam nhưng không phải sản phẩm nào cũng bán chạy và mang lại lợi nhuận cao. Nếu bạn vẫn chưa biết nên buôn gì để tối ưu lợi nhuận kinh doanh thì có thể tham khảo những mặt hàng sau đây:
+      figure
+        +img("common/article.jpg")
+        figcaption  Nhu cầu buôn hàng Quảng Châu ngày càng tăng cao
+      blockquote Một trong những hình thức tìm nguồn hàng sỉ từ Quảng Châu tận gốc mà bạn không nên bỏ qua đó là đặt hàng online Quảng Châu thông qua các trang TMĐT Trung Quốc. Với sự phát triển của công nghệ 4.0 như hiện nay, chỉ với vài cú click chuột, bạn có thể tìm kiếm, so sánh giá cả và đặt hàng trực tiếp trên các trang TMĐT mà không đến trực tiếp Quảng Châu để nhập hàng.
+      +self("nhập hàng Trung Quốc")
+      .img-full
+        +img("common/article.jpg")
+      em Có thể thương lượng giá với các chủ buôn để mua hàng hoá Quảng Châu được mức giá tốt nhất phù hợp với ngân sách của bạn.
+      b Hàng hoá không được đa dạng và phong phú như khi nhập sỉ hàng từ Quảng Châu tận gốc.
+      i Khi mua hàng hóa từ Quảng Châu tại các chợ ở Việt Nam, bạn nên lưu ý những điều sau đây:
+      table
+        thead
+          tr
+            th Chi phí
+            th Thông tin chi tiết
+            th  Bắt buộc
+            th Tùy chọn
+        tbody
+          tr
+            td  Giá hàng hóa
+            td Đây là mức giá niêm yết của sản phẩm trên Website bán hàng của Trung Quốc
+            td 70%
+            td 28.000đ/kg
+          tr
+            td  Giá hàng hóa
+            td Đây là mức giá niêm yết của sản phẩm trên Website bán hàng của Trung Quốc
+            td 70%
+            td 28.000đ/kg
+          tr
+            td  Giá hàng hóa
+            td Đây là mức giá niêm yết của sản phẩm trên Website bán hàng của Trung Quốc
+            td 70%
+            td 28.000đ/kg
+          tr
+            td  Giá hàng hóa
+            td Đây là mức giá niêm yết của sản phẩm trên Website bán hàng của Trung Quốc
+            td 70%
+            td 28.000đ/kg
+          tr
+            td  Giá hàng hóa
+            td Đây là mức giá niêm yết của sản phẩm trên Website bán hàng của Trung Quốc
+            td 70%
+            td 28.000đ/kg
+      .table-resp
+        table
+          thead
+            tr
+              th Chi phí
+              th Thông tin chi tiết
+              th  Bắt buộc
+              th Tùy chọn
+          tbody
+            tr
+              td  Giá hàng hóa
+              td Đây là mức giá niêm yết của sản phẩm trên Website bán hàng của Trung Quốc
+              td 70%
+              td 28.000đ/kg
+            tr
+              td  Giá hàng hóa
+              td Đây là mức giá niêm yết của sản phẩm trên Website bán hàng của Trung Quốc
+              td 70%
+              td 28.000đ/kg
+            tr
+              td  Giá hàng hóa
+              td Đây là mức giá niêm yết của sản phẩm trên Website bán hàng của Trung Quốc
+              td 70%
+              td 28.000đ/kg
+            tr
+              td  Giá hàng hóa
+              td Đây là mức giá niêm yết của sản phẩm trên Website bán hàng của Trung Quốc
+              td 70%
+              td 28.000đ/kg
+            tr
+              td  Giá hàng hóa
+              td Đây là mức giá niêm yết của sản phẩm trên Website bán hàng của Trung Quốc
+              td 70%
+              td 28.000đ/kg
+

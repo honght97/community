@@ -1,0 +1,51 @@
+.footer {
+  padding: 13rem 0;
+  overflow: hidden;
+  @include bgImage;
+  background-image: url("../images/home/bg.jpg");
+  @include max(991.98px) {
+    padding: 8rem 0;
+  }
+  @include max(575.98px) {
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+  }
+}
+.footer-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  @include max(991.98px) {
+    gap: 2.4rem 1.6rem;
+  }
+}
+.footer-l {
+  width: 56%;
+  color: #196e2c;
+  @include fz-25;
+  font-weight: 600;
+  line-height: 1.4;
+  @include max(1199.98px) {
+    @include fz-20;
+  }
+  @include max(991.98px) {
+    width: 100%;
+    text-align: center;
+  }
+  @include max(575.98px) {
+    font-size: 1.2rem;
+    white-space: nowrap;
+    line-height: 1.42;
+  }
+}
+.footer-r {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 2.5rem;
+  @include max(991.98px) {
+    gap: 1.2rem;
+    justify-content: center;
+  }
+}

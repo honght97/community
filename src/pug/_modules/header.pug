@@ -1,0 +1,30 @@
+.top-wrap
+    .container(data-aos="zoom-in")
+      .top-box
+        .top-l
+          .top-group
+            .top-img
+              +img("home/logo1.png")
+            .top-img
+              +img("home/logo2.png")
+            .top-img
+              +img("home/logo3.png")
+        .top-m
+          .top-group
+            .top-img
+              +img("home/main.png")
+          h1.hide-sitename DIỄN ĐÀN CHUYỂN ĐỔI XANH
+        .top-r
+          .top-group
+            .top-img
+              +img("home/logo4.png")
+            .top-img
+              +img("home/logo5.png")
+      .header-main
+        nav.header-nav
+          ul.menu-list
+            li.menu-item.current-menu-item
+              a(href="#") DIỄN ĐÀN
+            each menuData, index in [{title: "NGÀY HỘI"}, {title: "CUỘC THI"}]
+              li.menu-item
+                a(href="#")= menuData.title
