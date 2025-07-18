@@ -68,7 +68,8 @@
   width: 100%;
 }
 .header-nav {
-  width: max-content;
+  width: 100%;
+  // width: max-content;
 }
 .hide-sitename {
   visibility: visible;
@@ -78,14 +79,33 @@
 }
 
 .menu-item {
+  // width: 25%;
+  flex: 1;
   color: #5c5c5c;
   @include fz-30;
   font-weight: 500;
-  padding: 0 12rem;
+  // padding: 0 10rem;
   letter-spacing: 6px;
   white-space: nowrap;
   @include transition;
   position: relative;
+  text-align: center;
+  &:first-child {
+    width: 15%;
+    flex: unset;
+  }
+  & > a {
+    img {
+      width: 3.4rem;
+      height: auto;
+      @include max(767.98px) {
+        width: 2rem;
+      }
+      @include max(575.98px) {
+        width: 1.2rem;
+      }
+    }
+  }
 
   &::after {
     content: attr(data-text);
@@ -104,6 +124,12 @@
     //   width: 25%;
     //   background: $color-second;
     // }
+    & > a {
+      img {
+        filter: brightness(0) saturate(100%) invert(27%) sepia(16%)
+          saturate(5139%) hue-rotate(102deg) brightness(95%) contrast(80%);
+      }
+    }
   }
   // &::before {
   //   position: absolute;
@@ -123,6 +149,12 @@
     //   width: 25%;
     //   background: $color-second;
     // }
+    & > a {
+      img {
+        filter: brightness(0) saturate(100%) invert(27%) sepia(16%)
+          saturate(5139%) hue-rotate(102deg) brightness(95%) contrast(80%);
+      }
+    }
   }
   &:not(:last-child) {
     &::before {
@@ -139,16 +171,16 @@
     }
   }
   @include max(1500px) {
-    padding: 0 10rem;
+    // padding: 0 10rem;
   }
   @include max(1199.98px) {
-    padding: 0 6rem;
+    // padding: 0 6rem;
   }
   @include max(991.98px) {
-    padding: 0 3rem;
+    // padding: 0 3rem;
   }
   @include max(767.98px) {
-    padding: 0 2.4rem;
+    // padding: 0 2.4rem;
     @include fz-16;
   }
   @include max(575.98px) {

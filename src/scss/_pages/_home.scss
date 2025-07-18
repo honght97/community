@@ -383,6 +383,7 @@
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 3.8rem;
   row-gap: 1.5rem;
@@ -402,18 +403,18 @@
   &:not(:last-child) {
     border-right: 1px solid $color-pri;
   }
-  @include max(1400.98px) {
+  @include max(1600.98px) {
     padding: 0 2.5rem;
+    @include fz-26;
   }
   @include max(1199.98px) {
-    @include fz-26;
+    @include fz-18;
     .tt-50 {
       @include fz-45;
     }
   }
   @include max(991.98px) {
     padding: 0 1.6rem;
-    @include fz-18;
   }
   @include max(767.98px) {
     width: 50%;
